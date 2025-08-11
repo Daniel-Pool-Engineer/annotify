@@ -2,6 +2,9 @@
 
 A React-based web application that allows users to paste in text (100–1000 words) and automatically generate five annotations using the [OpenRouter API](https://openrouter.ai). Each annotation includes a quoted excerpt, an annotation type (`Clarify`, `Connect`, `Extend`, or `Note`), and a short explanation. The results are displayed in a sidebar with navigation controls.
 
+This project was inspired by [Perusall](https://www.perusall.com/) to create annotation that upholds a certain standard of the quality of annotations. 
+Perusall is an online social-interactive platform that allows a group of students to annotate as they read an assigned article. This software is used by many US universities today.
+
 ---
 
 ## ✨ Features
