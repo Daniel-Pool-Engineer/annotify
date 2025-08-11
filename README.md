@@ -46,7 +46,7 @@ A React-based web application that allows users to paste in text (100–1000 wor
 
 ---
 
-##🖥 Usage
+## 🖥 Usage
 
     1. Paste or type text (between 100 and 1000 words) into the text area.
 
@@ -57,7 +57,7 @@ A React-based web application that allows users to paste in text (100–1000 wor
     4. If the API fails, fallback annotations will be shown.
 
 ---
-##🛠 Technologies Used
+## 🛠 Technologies Used
 
     1. React (Frontend framework)
 
@@ -68,5 +68,5 @@ A React-based web application that allows users to paste in text (100–1000 wor
     4. CSS (Custom styling)
 
 ---
-##📜 License
+## 📜 License
 This project is licensed under the MIT License.
