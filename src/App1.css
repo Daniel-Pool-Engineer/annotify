@@ -1,4 +1,3 @@
-/* Sidebar container */
 .annotation-sidebar {
   position: fixed;
   right: 220px;
@@ -7,7 +6,6 @@
   height: calc(100vh - 40px);
 }
 
-/* Card styling */
 .annotation-card {
   background: white;
   border-radius: 10px;
@@ -19,7 +17,6 @@
   overflow: hidden;
 }
 
-/* Card header with integrated navigation */
 .card-header {
   padding: 12px 15px;
   border-bottom: 1px solid #e5e7eb;
@@ -36,7 +33,6 @@
   flex: 1;
 }
 
-/* Navigation controls - now inside header */
 .annotation-nav {
   display: flex;
   align-items: center;
@@ -72,7 +68,6 @@
   text-align: center;
 }
 
-/* Rest of the styles remain the same */
 .card-content {
   padding: 15px;
   flex: 1;
@@ -111,12 +106,6 @@
   margin-top: 15px;
 }
 
-.highlight {
-  background-color: #fef08a;
-  padding: 0 2px;
-  border-radius: 2px;
-}
-
 .error-message {
   color: #ef4444;
   background: #fee2e2;
@@ -124,4 +113,5 @@
   border-radius: 6px;
   margin-top: 15px;
   font-size: 14px;
+
 }
