@@ -39,7 +39,7 @@ Perusall is an online social-interactive platform that allows a group of student
 3. **Set up environment variables**
   Create a .env file in the project root:
 
-  VITE_OPENROUTER_KEY=your_openrouter_api_key_here
+     VITE_OPENROUTER_KEY=your_openrouter_api_key_here
 
 4. **Run the development server**
     '''bash
