@@ -1,0 +1,127 @@
+/* Sidebar container */
+.annotation-sidebar {
+  position: fixed;
+  right: 220px;
+  top: 240px;
+  width: 360px;
+  height: calc(100vh - 40px);
+}
+
+/* Card styling */
+.annotation-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 500px;
+  overflow: hidden;
+}
+
+/* Card header with integrated navigation */
+.card-header {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fafb;
+}
+
+.annotation-type {
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: capitalize;
+  flex: 1;
+}
+
+/* Navigation controls - now inside header */
+.annotation-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-button {
+  background: #000000;
+  border: 1px solid #e5e7eb;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.nav-button:hover {
+  background: #464545;
+}
+
+.nav-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.nav-counter {
+  font-size: 13px;
+  color: #6b7280;
+  min-width: 40px;
+  text-align: center;
+}
+
+/* Rest of the styles remain the same */
+.card-content {
+  padding: 15px;
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-preview {
+  background: #f9fafb;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.quote-container {
+  margin: 10px 0;
+}
+
+.quote {
+  font-style: italic;
+  color: #6b7280;
+  font-size: 14px;
+  border-left: 3px solid #e5e7eb;
+  padding-left: 10px;
+  margin: 0;
+}
+
+.annotation-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #4b5563;
+  margin-top: 15px;
+}
+
+.highlight {
+  background-color: #fef08a;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+.error-message {
+  color: #ef4444;
+  background: #fee2e2;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 15px;
+  font-size: 14px;
+}

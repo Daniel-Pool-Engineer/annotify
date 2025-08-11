@@ -1,0 +1,42 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color-scheme: light dark;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(125% 125% at 50% 10%, #000000 60%, rgb(53, 0, 75) 100%);
+  z-index: -30;
+  box-shadow: inset 0 0 50px rgba(106, 0, 151, 0.15), 
+              inset 0 0 100px rgba(106, 0, 151, 0.15);
+}
+
+body {
+  margin: 0;    
+  place-items: center;  
+}
+
+.gradient-name {
+  font-size: 80px;
+  background:-webkit-linear-gradient(#ffffff, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: sans-serif;
+  text-align: center; 
+  position: absolute;
+  top:35px;
+}
+
+.intro {
+  font-size: 24px;
+  color: #ffffff;
+  text-align: center;
+  position: absolute;
+  top: 20px;
+}
