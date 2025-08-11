@@ -5,18 +5,6 @@ function App1({ annotations, error, textToAnnotate }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentAnnotation = annotations[currentIndex];
 
-  const highlightText = (fullText, highlight) => {
-    if (!highlight || !fullText) return fullText;
-    
-    const parts = fullText.split(highlight);
-    return parts.map((part, i) => (
-      <React.Fragment key={i}>
-        {part}
-        {i < parts.length - 1 && <span className="highlight">{highlight}</span>}
-      </React.Fragment>
-    ));
-  };
-
   return (
     <div className="annotation-sidebar">
 
@@ -62,5 +50,6 @@ function App1({ annotations, error, textToAnnotate }) {
     </div>
   );
 }
+
 
 export default App1;
