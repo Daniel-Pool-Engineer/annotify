@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './App1.css';
 
+
 function App1({ annotations, error, textToAnnotate }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentAnnotation = annotations[currentIndex];
 
   return (
     <div className="annotation-sidebar">
-
       <div className="annotation-card">
         <div className="card-header">
           <span className={`annotation-type ${currentAnnotation.type.toLowerCase()}`}>
@@ -32,9 +32,6 @@ function App1({ annotations, error, textToAnnotate }) {
           </div>
         </div>
         <div className="card-content">
-          <div className="text-preview">
-            {highlightText(textToAnnotate, currentAnnotation.quote)}
-          </div>
           <div className="quote-container">
             <p className="quote">"{currentAnnotation.quote}"</p>
           </div>
@@ -50,6 +47,5 @@ function App1({ annotations, error, textToAnnotate }) {
     </div>
   );
 }
-
 
 export default App1;

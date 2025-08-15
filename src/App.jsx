@@ -85,13 +85,13 @@ function App() {
           {
             role: 'system',
 content:
-  'Generate exactly 5 annotations about the provided passage.\n' +
+  'Generate annotations for key topics of the provided passage.\n' +
   'For each annotation, output exactly two lines:\n' +
   'Quote: copy a short, relevant line from the passage.\n' +
   'Type: Clarify | Connect | Extend — Explanation\n' +
   'Do not include any other text or formatting.'
           },
-          { role: 'user', content: `Generate 5 annotations from any parts of the article: ${text}` },
+          { role: 'user', content: `Generate annotations from any parts of the article: ${text}` },
         ],
       });
 
@@ -100,8 +100,10 @@ content:
       setAnnotations(processResponse(content));
     } catch (e) {
       console.error('Generation failed:', e);
-      setError(getUserFriendlyError(e));
-      // Create fallback annotations if needed
+      // Avoid calling an undefined helper; just show the message
+      setError(e instanceof Error ? e.message : 'Request failed');
+
+      // Create fallback annotations
       const fallbackAnnotations = text
         .split(/[.!?]/)
         .map((s) => s.trim())
@@ -129,25 +131,19 @@ content:
           className="paste-textarea"
         />
         <div className="stats">
-          <p>Character Count: {text.length}</p>
-          <p>Word Count: {text.trim() ? text.trim().split(/\s+/).length : 0}</p>
+          <p>Character Count: {text.length}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Word Count: {text.trim() ? text.trim().split(/\s+/).length : 0}
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button 
+            onClick={handleGenerate} 
+            disabled={!text.trim() || isLoading}
+            className= "generate-btn"
+          >annotatify</button>
+          </p>
         </div>
       </div>
-      <button 
-        onClick={handleGenerate} 
-        disabled={!text.trim() || isLoading}
-        className={`generate-btn ${isLoading ? 'loading' : ''}`}
-      >
-        {isLoading ? (
-          <>
-            <span className="spinner"></span>
-            Generating...
-          </>
-        ) : (
-          'Generate Annotations'
-        )}
-      </button>
-      {annotations.length > 0 && <App1 annotations={annotations} error={error} />}
+      {annotations.length > 0 && (
+        <App1 annotations={annotations} error={error} textToAnnotate={text} />
+      )}
     </div>
   );
 }
