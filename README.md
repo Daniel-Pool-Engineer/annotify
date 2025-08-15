@@ -33,7 +33,6 @@ Perusall is an online social-interactive platform that allows a group of student
    cd <project-folder>
 
 2. **Install dependencies**
-'''bash
   npm install
 
 3. **Set up environment variables**
