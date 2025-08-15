@@ -1,4 +1,4 @@
-# annotify
+# annotatify
 
 A React-based web application that allows users to paste in text (100–1000 words) and automatically generate five annotations using the [OpenRouter API](https://openrouter.ai). Each annotation includes a quoted excerpt, an annotation type (`Clarify`, `Connect`, `Extend`, or `Note`), and a short explanation. The results are displayed in a sidebar with navigation controls.
 
